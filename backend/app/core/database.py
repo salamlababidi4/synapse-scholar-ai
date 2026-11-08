@@ -37,3 +37,12 @@ def check_database_connection():
             text("SELECT current_database()")
         )
         return result.scalar()
+
+from collections.abc import Generator
+from sqlalchemy.orm import Session
+
+
+def get_db() -> Generator[Session, None, None]:
+    with SessionLocal() as db:
+        yield db
+        

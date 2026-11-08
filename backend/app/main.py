@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from backend.app.core.database import check_database_connection
+from backend.app.api.papers import router as papers_router
 
 
 app = FastAPI(
@@ -7,6 +8,8 @@ app = FastAPI(
     description="AI-powered academic research intelligence platform",
     version="0.1.0"
 )
+
+app.include_router(papers_router)
 
 
 @app.get("/")
