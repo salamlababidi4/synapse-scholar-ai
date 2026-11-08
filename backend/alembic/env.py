@@ -5,6 +5,7 @@ from sqlalchemy import engine_from_config, pool
 
 from backend.app.core.base import Base
 from backend.app.models.paper import Paper  # noqa: F401
+from backend.app.models.paper_chunk import PaperChunk  # noqa: F401
 from backend.app.core.database import DATABASE_URL
 
 config = context.config

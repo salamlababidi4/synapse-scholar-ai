@@ -5,3 +5,6 @@ psycopg[binary]
 python-dotenv
 alembic
 pgvector
+pymupdf
+python-multipart
+sentence-transformers
